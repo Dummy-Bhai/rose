@@ -1,0 +1,12 @@
+clear;
+clc; clear; close;
+s = poly(0, 's');
+N = (s+1)*(s+3);
+D=(s+2)*(s+4);
+F=N/D;
+disp('Given Transfer Function: ', F);
+zero = roots(N);
+pole = roots(D);
+disp('Zeros of transfer function: ', zero);
+disp('Poles of transfer function: ', pole);
+plzr(F);

@@ -1,0 +1,9 @@
+clear;
+clc;
+close;
+
+z=%z;
+a=(z+0.5)*(z-1);
+b=z+0.2;
+h=ldiv(b,a,4);
+disp(h,"h(n)=");

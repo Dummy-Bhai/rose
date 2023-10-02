@@ -1,0 +1,10 @@
+clear;
+clc;
+close;
+z=poly(0,'z');
+H=(1+z)/(1+3/4*z+1/8*z^2);
+pole=roots(1+z);
+zero=roots(1+3/4*z+1/8*z^2);
+disp(H,'System Transfer Function H(z)=');
+disp(zero, 'System zeros are at');
+disp(pole, 'System poles are at ');

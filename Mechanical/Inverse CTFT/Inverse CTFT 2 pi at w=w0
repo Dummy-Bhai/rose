@@ -1,0 +1,23 @@
+clear;
+clc;
+close;
+A=1;
+Dw= 0.005;
+W1=4;
+Wo=2;
+w=-W1/2:Dw:W1/2;
+for i=1:length(w)
+    if w(i)==Wo then
+       XW(i)=2*%pi;
+    else
+       XW(i)=0;
+    end
+end
+XW=XW';
+t=-3*%pi:%pi/length(w):3*%pi; 
+xt=(1/(2*%pi)) *XW *exp(sqrt(-1)*w'*t)*Dw;
+xt =real(1+xt);
+subplot(2,1,2)
+plot(t,xt);
+xlabel('tSec');
+title('Time domain signal x(t)')
